@@ -41,12 +41,17 @@ namespace MatchGame
                 "🐻", "🐻",
             };
 
+            //Create a obj random
             Random random = new Random();
 
+            //Interact on all textBlocks avaible
             foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
             {
+                //Generate a random number based on animalEmoji List
                 int index = random.Next(animalEmoji.Count);
+                //Put the random emoji var
                 string nextEmoji = animalEmoji[index];
+                //Put emoji on text
                 textBlock.Text = nextEmoji;
                 //Romove emoji list
                 animalEmoji.RemoveAt(index);
