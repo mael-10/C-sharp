@@ -46,10 +46,9 @@ namespace MatchGame
             foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
             {
                 int index = random.Next(animalEmoji.Count);
-                Console.WriteLine(index);
                 string nextEmoji = animalEmoji[index];
                 textBlock.Text = nextEmoji;
-                //Romove
+                //Romove emoji list
                 animalEmoji.RemoveAt(index);
             }
         }
