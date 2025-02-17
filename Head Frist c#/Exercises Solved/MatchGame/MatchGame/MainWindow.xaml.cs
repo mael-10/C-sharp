@@ -28,6 +28,7 @@ namespace MatchGame
         }
 
         private void SetUpGame()
+
         {
             List<string> animalEmoji = new List<string>()
             {
@@ -44,7 +45,7 @@ namespace MatchGame
             //Create a obj random
             Random random = new Random();
 
-            //Interact on all textBlocks avaible
+            //Interact on all textBlocks with the name "mainGrid" available
             foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
             {
                 //Generate a random number based on animalEmoji List
@@ -53,9 +54,14 @@ namespace MatchGame
                 string nextEmoji = animalEmoji[index];
                 //Put emoji on text
                 textBlock.Text = nextEmoji;
-                //Romove emoji list
+                //Romove emoji current index list
                 animalEmoji.RemoveAt(index);
             }
+        }
+
+        private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }
