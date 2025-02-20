@@ -18,13 +18,37 @@ namespace MatchGame
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
+    using System.Windows.Threading;
+
     public partial class MainWindow : Window
     {
+        /*
+          Add these three lines of code to
+          create a new timer and add two fields
+          to keep track of the time elapsed and
+          number of matches the player has found.
+         */
+        DispatcherTimer timer = new DispatcherTimer();
+        int tenthsOfSecondsElapsed;
+        int matchesFound;
+
+        
         public MainWindow()
         {
             InitializeComponent();
+
+            timer.Interval = TimeSpan.FromSeconds(.1);
+            // Insets a method
+            timer.Tick += Timer_Tick;
             SetUpGame();
 
+
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void SetUpGame()
@@ -45,7 +69,7 @@ namespace MatchGame
             //Create a obj random
             Random random = new Random();
 
-            //Interact on all textBlocks with the name "mainGrid" available
+            //Interact on all textBlocks inside the name "mainGrid" grid available
             foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
             {
                 //Generate a random number based on animalEmoji List
