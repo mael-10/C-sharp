@@ -46,9 +46,16 @@ namespace MatchGame
 
         }
 
+        //Method to a timer call
         private void Timer_Tick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            tenthsOfSecondsElapsed++;
+            timeTextBlock.Text = (tenthsOfSecondsElapsed / 10F).ToString("0.0s");
+            if (matchesFound == 8)
+            {
+                timer.Stop();
+                timeTextBlock.Text = timeTextBlock.Text + " - Play again?";
+            }
         }
 
         private void SetUpGame()
@@ -72,20 +79,29 @@ namespace MatchGame
             //Interact on all textBlocks inside the name "mainGrid" grid available
             foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
             {
-                //Generate a random number based on animalEmoji List
-                int index = random.Next(animalEmoji.Count);
-                //Put the random emoji var
-                string nextEmoji = animalEmoji[index];
-                //Put emoji on text
-                textBlock.Text = nextEmoji;
-                //Romove emoji current index list
-                animalEmoji.RemoveAt(index);
+                if(textBlock.Name != "timeTextBlock")
+                {
+                    //Generate a random number based on animalEmoji List
+                    int index = random.Next(animalEmoji.Count);
+                    //Put the random emoji var
+                    string nextEmoji = animalEmoji[index];
+                    //Put emoji on text
+                    textBlock.Text = nextEmoji;
+                    //Romove emoji current index list
+                    animalEmoji.RemoveAt(index);
+                }
             }
+
+            //Starter the timer and add the fields
+            timer.Start();
+            tenthsOfSecondsElapsed = 0;
+            matchesFound = 0;
         }
 
         TextBlock lastTextBlockClicked;
         bool findingMatch = false;
 
+        //Method to get action when textblock is clicked
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
             TextBlock textBlock = sender as TextBlock;
@@ -98,6 +114,7 @@ namespace MatchGame
             }
             else if (textBlock.Text == lastTextBlockClicked.Text)
             {
+                matchesFound++;
                 textBlock.Visibility = Visibility.Hidden;
                 findingMatch = false;
             }
@@ -105,6 +122,14 @@ namespace MatchGame
             {
                 lastTextBlockClicked.Visibility = Visibility.Visible;
                 findingMatch = false;
+            }
+        }
+
+        private void TimeTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (matchesFound == 8)
+            {
+                SetUpGame();
             }
         }
     }
