@@ -6,6 +6,7 @@
 * **Toolbox** - Has many visual controls to drag onto Designer
 * **Properties** - Show properties to selected designer.
 * **Error List** - Debugger console
+* **Using F9** - highlight the line
 
 ## Getting Started
 WPF (Windows Presentation Foundation) is a .NET framework tool for building graphical user interfaces (GUIs). It uses XAML for designing GUIs.
@@ -17,6 +18,8 @@ WPF (Windows Presentation Foundation) is a .NET framework tool for building grap
 - **`<TextBlock/>`**: Similar to `<p></p>` in HTML, used for displaying text.
 - **`<Grid/>`**: Similar to HTML tables. Use `<ColumnDefinition/>` and `<RowDefinition/>` to automatically adjust layout to window size.
 - **TextWrapping**: To enable or disable text wrapping, expand the **Text section** in the properties panel and search for **TextWrapping**.
+- `spanColumn and spanRow` spans columns and rows at arrange you want to set up (section layout).
+- `TextBlock` put a name to the properties (like a dom object)
 
 ## TextBlock
 
