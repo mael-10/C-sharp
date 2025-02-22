@@ -29,11 +29,14 @@ namespace MatchGame
           to keep track of the time elapsed and
           number of matches the player has found.
          */
+
+        //Create a new timer
         DispatcherTimer timer = new DispatcherTimer();
+        //Keep track of time elapsed
         int tenthsOfSecondsElapsed;
+        //number of matches the player 
         int matchesFound;
 
-        
         public MainWindow()
         {
             InitializeComponent();
@@ -42,8 +45,6 @@ namespace MatchGame
             // Insets a method
             timer.Tick += Timer_Tick;
             SetUpGame();
-
-
         }
 
         //Method to a timer call
@@ -79,13 +80,16 @@ namespace MatchGame
             //Interact on all textBlocks inside the name "mainGrid" grid available
             foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
             {
+                //It fix the bug
                 if(textBlock.Name != "timeTextBlock")
                 {
+                    //When program is restarted it makes icon visible
+                    textBlock.Visibility = Visibility.Visible;
                     //Generate a random number based on animalEmoji List
                     int index = random.Next(animalEmoji.Count);
                     //Put the random emoji var
                     string nextEmoji = animalEmoji[index];
-                    //Put emoji on text
+                    //Put emoji on text 
                     textBlock.Text = nextEmoji;
                     //Romove emoji current index list
                     animalEmoji.RemoveAt(index);
