@@ -6,8 +6,15 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            int number = 1;
+            OperatorExamples();
+        }
+
+        //Private just can be called to declareted class
+        //The method (single void) means  that doesnt return any value
+        private static void OperatorExamples()
+        {
+            int width = 3;
+            width++;
         }
     }
 }
