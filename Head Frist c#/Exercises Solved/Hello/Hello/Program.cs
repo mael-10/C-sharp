@@ -13,6 +13,7 @@ namespace HelloWorld
         //The method (single void) means  that doesnt return any value
         private static void OperatorExamples()
         {
+            string numberGood;
             int width = 3;
             //Add more
             width++;
@@ -29,7 +30,54 @@ namespace HelloWorld
             Console.WriteLine(result + " is Good ");
 
             bool truthAvalue = true;
-            Console.WriteLine(truthAvalue);
+            Console.WriteLine(truthAvalue + "\n");
+
+            bool trueNumber = (2 > 5) || (5 > 3);
+            Console.WriteLine(trueNumber);
+            //Number good é string
+            numberGood = Console.ReadLine();
+
+            if (numberGood == "bom dia")
+            {
+                Console.WriteLine("Um bom dia para você também");
+
+            }
+            else
+            {
+                Console.WriteLine("Você não deu bom dia para mim :(");
+            }
+
+            int infiniteLoop = 6;
+
+            while (infiniteLoop == 6)
+            {
+                Console.WriteLine(infiniteLoop);
+                infiniteLoop++;
+            }
+
+            do
+            {
+                Console.WriteLine(infiniteLoop);
+            } while (infiniteLoop == 6);
+
+            //i goes every two numbers
+            for(int i = 0; i <= 10; i+=2)
+            {
+                Console.WriteLine("Aqui está os números " + i);
+            }
+
+            int p = 2;
+            for (int q = 2; q < 32;
+             q = q * 2)
+             {
+                while (p < q)
+                {
+                    p = p * 2;
+                }
+                q = p - q;
+            }
+
+
         }
     }
 }
