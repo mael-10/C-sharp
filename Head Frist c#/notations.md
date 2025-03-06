@@ -31,7 +31,7 @@ WPF (Windows Presentation Foundation) is a .NET framework tool for building grap
 
 ## TextBlock
 
-To access TextBlock go to Toobox -> TextBlock and drag to the Designer.
+To access TextBlock go to Toobox -> TextBlock and drag to the Designer
 
 ### Properties TextBlock
 
@@ -59,9 +59,9 @@ Text boxs are like an HTML's input
 ### Properties TextBox
 
 -**TextChanged="numberTextBox_TextChanged"** is an *event handler* which the event handler is called as long as user continue to type.<br>
-- **PreviewTextInput** will to only accept input that’s made up of numbers.<br>
+- **PreviewTextInput** will only accept input that’s made up of numbers.<br>
 
-//When you put properties
+//When you put properties 
 
 ## Title
 
