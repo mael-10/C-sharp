@@ -16,11 +16,13 @@ namespace ExperimentWithControls
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         //When a event handle is created, take a closer look on name "x:Name" and the the properie's name. 
         //To set up event handle name, need to use the two names
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         //Every time that text change, will execute that method
@@ -91,6 +93,13 @@ namespace ExperimentWithControls
             {
                 number.Text = editableComboBox.Text;
             }
+        }
+
+        //Brush is a classe
+        private void PurpleBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Bck.Background = Brushes.Purple;
+            number.Foreground = Brushes.White;
         }
     }
 }
