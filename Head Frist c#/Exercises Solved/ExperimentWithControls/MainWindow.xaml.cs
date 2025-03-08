@@ -95,7 +95,7 @@ namespace ExperimentWithControls
             }
         }
 
-        //Brush is a classe
+        //Brush is a classe for a pallete of colors
         private void PurpleBtn_Click(object sender, RoutedEventArgs e)
         {
             Bck.Background = Brushes.Purple;
