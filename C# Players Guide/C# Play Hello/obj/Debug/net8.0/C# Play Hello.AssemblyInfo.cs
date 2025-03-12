@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("C# Play Hello")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f937d5f491e7247c827d070afccdc35c8e0b79bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7e427ced241fae8d447efb17116e328613282cb")]
 [assembly: System.Reflection.AssemblyProductAttribute("C# Play Hello")]
 [assembly: System.Reflection.AssemblyTitleAttribute("C# Play Hello")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
