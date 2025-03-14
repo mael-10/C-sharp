@@ -1,4 +1,6 @@
-﻿namespace Guide_Begin
+﻿using System.Net.Mail;
+
+namespace Guide_Begin
 {
     internal class Program
     {
@@ -12,7 +14,20 @@
             string b = Console.ReadLine();
             //Object name program
             string c = "of Doom 3000!";
-            Console.WriteLine("The " + b + " " + a + " " + c);
+            Console.WriteLine("The " + b + " " + a + " " + c + "\n \n");
+
+            string OiBebe = a;
+            Console.WriteLine(OiBebe);
+            a = "sem mais nem menos";
+            Console.WriteLine(a);
+            Console.WriteLine(OiBebe + "\n \n");
+
+
+            int r, f, g;
+            r = f = g = 10;
+            Console.WriteLine(f);
         }
+
+       
     }
 }
