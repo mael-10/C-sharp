@@ -63,6 +63,24 @@
 
             int forma = 0x0F00FF;
             Console.WriteLine(forma);
+
+            char aLetter = '\u005A'; // 'z' at hexadecimal unicode
+            Console.WriteLine(aLetter);
+
+            decimalF();
+        }
+
+        public static void decimalF()
+        {
+            
+            double casa = 65.93e-3; //65.93 ^ 10^³
+            Console.WriteLine(casa);
+
+            double forma = 2e-2;
+            Console.WriteLine(forma);
+
+            float abcd = 3.5623f;
+            Console.WriteLine(abcd);
         }
     }
 }
