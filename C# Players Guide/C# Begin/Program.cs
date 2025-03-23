@@ -80,7 +80,18 @@
             Console.WriteLine(forma);
 
             float abcd = 3.5623f;
-            Console.WriteLine(abcd);
+            Console.WriteLine(abcd + "\n \n");
+
+            Console.WriteLine("Lost precison (6 to 7 digits of precison");
+            float cc = 0.121287612F;
+            Console.WriteLine(cc);
+
+            double wOverFlow = 2e40;
+            Console.WriteLine(wOverFlow);
+
+            float wwOver = (float)wOverFlow;
+            //With over flow
+            Console.WriteLine(wwOver);
         }
     }
 }
