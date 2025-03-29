@@ -79,7 +79,14 @@
 
             x = 1.67854e5;
             abcww = (float)x;
-            Console.WriteLine(abcww); 
+            Console.WriteLine(abcww);
+
+            byte semSentido = 20;
+            byte semHistoria = 40;
+            
+            //Não pode converter int para short, pois os valores são convetidos para int para fazer a soma.
+            //Por isso que int e long consegue armazenar sem cast, pois podem armazenas literals menores
+            short resultAbcx = semHistoria + semSentido;
         }
     }
 }
