@@ -81,12 +81,18 @@
             abcww = (float)x;
             Console.WriteLine(abcww);
 
-            byte semSentido = 20;
-            byte semHistoria = 40;
-            
-            //Não pode converter int para short, pois os valores são convetidos para int para fazer a soma.
+            //byte semSentido = 20;
+            //byte semHistoria = 40;
+
+            //Não pode converter int para short sem cast, pois os valores são convetidos para int para fazer a soma.
             //Por isso que int e long consegue armazenar sem cast, pois podem armazenas literals menores
-            short resultAbcx = semHistoria + semSentido;
+            //short resultAbcx = semHistoria + semSentido;
+
+            //Quando se adiciona ponto nos numeros, ele é automaticamente double.
+            //Se não colocar ponto, ele considera com inteiro. Aí não tem com fazer uma divisão de inteiros.
+            //Mas posso dividir um número inteiro pelo um floting point
+            float testeNumber = (float)(7 / 29.0 * 2);
+            Console.WriteLine(testeNumber);
         }
     }
 }
