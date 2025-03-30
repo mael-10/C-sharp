@@ -93,6 +93,8 @@
             //Mas posso dividir um número inteiro pelo um floting point
             float testeNumber = (float)(7 / 29.0 * 2);
             Console.WriteLine(testeNumber);
+
+            var small = 100;
         }
     }
 }
