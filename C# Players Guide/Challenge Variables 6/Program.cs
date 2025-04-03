@@ -95,6 +95,10 @@
             Console.WriteLine(testeNumber);
 
             var small = 100;
+            string maisUme = "10";
+            int stringTo32 = Convert.ToInt32(maisUme);
+            stringTo32++;
+            Console.WriteLine(stringTo32);
         }
     }
 }
