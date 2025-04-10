@@ -30,6 +30,7 @@
             Console.WriteLine($"Eggs for each of four sisters {eggsEachSister}");
             Console.WriteLine($"Eggs for duckerbear {eggsForDuckbear} \n \n");
 
+            //Kingdom exercise
             Console.WriteLine("Sir Meleca answer questions below");
             Console.WriteLine("estate: ");
             short melecaEstate = Convert.ToInt16(Console.ReadLine());
@@ -38,12 +39,7 @@
             Console.WriteLine("province: ");
             short melecaProvince = Convert.ToInt16(Console.ReadLine());
 
-            melecaEstate *= 1;
-            melecaDutchy *= 3;
-            melecaProvince *= 6;
-            int melecaTotal = melecaEstate + melecaDutchy + melecaProvince;
-
-            Console.WriteLine("Sir Casik answer questions below");
+            Console.WriteLine("\nSir Casik answer questions below");
             Console.WriteLine("estate: ");
             short casikEstate = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("duchy: ");
@@ -51,12 +47,7 @@
             Console.WriteLine("province: ");
             short casikProvince = Convert.ToInt16(Console.ReadLine());
 
-            casikEstate *= 1;
-            casikDutchy *= 3;
-            casikProvince *= 6;
-            int CasikTotal = casikEstate + casikDutchy + casikProvince;
-
-            Console.WriteLine("Sir Balik answer questions below");
+            Console.WriteLine("\nSir Balik answer questions below");
             Console.WriteLine("estate: ");
             short BalikEstate = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("duchy: ");
@@ -64,14 +55,40 @@
             Console.WriteLine("province: ");
             short BalikProvince = Convert.ToInt16(Console.ReadLine());
 
-            BalikEstate *= 1;
-            BalikDutchy *= 3;
-            BalikProvince *= 6;
-            int BalikTotal = BalikEstate + BalikDutchy + BalikProvince;
+            int melecaTotal = melecaEstate * 1 + melecaDutchy * 3 + melecaProvince * 6;
+            int CasikTotal = casikEstate * 1 + casikDutchy * 3 + casikProvince * 6;
+            int BalikTotal = BalikEstate * 1 + BalikDutchy * 3 + BalikProvince * 6;
 
-            Console.WriteLine($"Sir meleca, your final result: {melecaTotal}");
-            Console.WriteLine($"Sir Casik, your final result: {casikProvince}");
-            Console.WriteLine($"Sir Casik, your final result: {BalikTotal}");
+            Console.WriteLine($"\n\nSir Meleca, your final result: {melecaTotal}");
+            Console.WriteLine($"Sir Casik, your final result: {CasikTotal}");
+            Console.WriteLine($"Sir Basik, your final result: {BalikTotal}");
+
+            int x = 5;
+            int y = x++;  // x is 6, y is 5
+            y = x++; // x is 7, y is 6
+            Console.WriteLine(y);
+
+            short q = 2;
+            short b = 3;
+            int total = q + b; // The values q and b are converted to ints automatically.
+
+            Console.WriteLine(b.GetType()); //System.Int16 is the type
+            Console.WriteLine(total.GetType()); //System.Int32
+            short teste = (short)(q + b); // The values q and b now is shorts
+
+            float w = 60.5f;
+            float wwc = 60.5f;
+            float sum = w + wwc;
+
+            Console.WriteLine(sum + "Here");
+
+            int smaller = Math.Min(2, 10);
+            int larger = Math.Max(2, 10);
+
+            Console.WriteLine(smaller);
+            Console.WriteLine(larger);
+
+            double ww2 = 3;
         }
     }
 }
