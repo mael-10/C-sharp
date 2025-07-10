@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "replicator2", "replicator2.csproj", "{072AFF68-DA94-4E3F-82EF-4C002995F794}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{072AFF68-DA94-4E3F-82EF-4C002995F794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{072AFF68-DA94-4E3F-82EF-4C002995F794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{072AFF68-DA94-4E3F-82EF-4C002995F794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{072AFF68-DA94-4E3F-82EF-4C002995F794}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53355487-CF2A-4EE0-9949-A8B8178066F7}
+	EndGlobalSection
+EndGlobal
