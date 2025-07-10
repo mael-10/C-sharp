@@ -61,7 +61,8 @@
             Console.WriteLine($"\n Writing playlist in replicator {replice}");
 
             Console.WriteLine("Multidimensional array");
-            multiDimension(); 
+            multiDimension();
+            
         }
     }
 }
