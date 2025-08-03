@@ -37,6 +37,13 @@
                     Console.WriteLine($"Esse é o valor da posição [{i}][{j}]: {tableCost[i, j]}");
                 }
             }
+
+            teste();
+        }
+
+        static void teste()
+        {
+
         }
     }
 }
