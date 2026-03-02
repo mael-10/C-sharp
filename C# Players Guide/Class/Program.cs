@@ -1,112 +1,95 @@
-﻿
-namespace Class
+﻿using System.Text;
+
+namespace Class1
 {
     internal class Program
     {
-        public string name2;
+        public int teste = 4;
 
         static void Main(string[] args)
         {
-            string Name1 = ""; //uma variável local
-            Program program = new Program(); //instancia para acessar as variáveis globais
-
-            program.name2 = Name1;
             Console.WriteLine("Hello, World!");
+            Vamos.Teste(); //classe estática
+            Score score = new Score(); //classe constructor
+            score.name = "test";
 
-            Score score = new Score(); //SCORE IS A CONSTRUCTOR
-            score.name = "RD-D2"; //we access that throught a instance 
-            score.points = 111122; //that isn
-            score.level = 52; //Aqui puxamos da instancia, no console.writeLine, puxamos da própia class
-
-            if (score.EarnedStar())
-                Console.WriteLine("Your earned a star");
+            //È possível simplificar ao inves de colocar o nome do objeto, pode colococar apenas new para simplificar pq ele já faz a inferência
+            RegistroDoUsuário user = new ();
+            RegistroDoUsuário user2 = new RegistroDoUsuário();
+            RegistroDoUsuário user3 = new RegistroDoUsuário(new StringBuilder("Oi"), new StringBuilder("Tudo bem?"), new StringBuilder("Futuramente serei o melhor programador ever"), 100000.00m);
 
 
-            Score score2 = new Score(); //Mesmo que esteja chamando a mesma classe é uma outra instancia, ou seja a heap é diferente
-            score2.name = "How to do it";
-            score2.points = 1;
+            user._name = new StringBuilder("Natanel");
+            user2._name = new StringBuilder("Emanuel");
+            
 
-            Score score3 = new Score(); //o construtor é para incializar a variável com algum valor
-            Console.WriteLine(score3.name);
+            user.Oitu();
+            user2.Oitu();
+            Console.WriteLine(user2._name);
+            Console.WriteLine($"Olá ! No futuro você sera o melhor e {user3.endereco} \n");
+            Console.WriteLine();
+        
 
-            int[] form = new int[3];
 
-            Score2 maisUmaVez = new Score2("Oi bebe", 50, 100);
+            float a = 0.1f;
+            float b = 0.2f;
 
-            Score3 maisUmaVez3 = new Score3("Vamos mais uma vez", 20, 30);
+            decimal c = (decimal)(a + b);
 
-            Score4 score4DD = new Score4("Score 4", 10, 43.5f);//chama um
+            Console.WriteLine(c);
+        }
 
-            Score4 score4DD5 = new Score4(); //reutiliza
+        public class Score
+        {
+            public string? name;
+            public int points;
+            public int level;
 
-            Score first = new(); //Essa é uma maneira de leaving off class name. Ou seja, fica mais resumido
+            public bool EarnedStart() => (points / level) > 10000;
         }
     }
 
-    class Score //class is on the heap
+    public class Vamos //as variáveis só vivem quando o objeto está vivo
     {
-        public string name;
-        public int points;
-        public int level;
+        public string? name; //instance variables
+        public int age;
+        public decimal saldoBancario;
 
-        public Score() //constructores ensure that a variavel ensure that it begins in a good stats. Assigning initial values to each field is common.
+
+        public static void Teste()
         {
-            name = "Unknown";
-            points = 0;
-            level = 1;
+            Console.WriteLine("Oiiiiii");
         }
-
-        public bool EarnedStar() => (points / level) > 1000;
     }
 
-    class Score2 //class is on the heap
+    public class RegistroDoUsuário
     {
-        public string name;
-        public int points;
-        public int level;
+        public StringBuilder _name;
+        public StringBuilder age;
+        public StringBuilder endereco;
+        //Valor é inicializado no inline, se criar um construtor que o modifica, o construtor vai ter a prioridae
+        public decimal saldoBancario = 0.00m;
 
-        public Score2(string name, int points, int level) //constructores ensure that a variavel ensure that it begins in a good stats. Assigning initial values to each field is common.
+        //Construtores são uma maneira de inicializar valores. Se não tiver nada dentro do construtor, os valores vao ser inicializados com nulos
+        public RegistroDoUsuário() //constructors não pode retornar um return type
         {
-            this.name = name;
-            this.points = points;
-            this.level = level; //o this indica as variáveis globais, pois sem isso pode acontecer shadowing
+            _name = new StringBuilder("name");
+            age = new StringBuilder("0");
+            endereco = new StringBuilder("rua");
+        }
+
+        public RegistroDoUsuário(StringBuilder name, StringBuilder m, StringBuilder z, decimal Saldo)
+        {
+            _name = name; age = m; endereco = z; saldoBancario = Saldo;
+        }
+
+
+
+        public bool EarnedStar() => (10 / 5) > 1000;
+
+        public void Oitu()
+        {
+            Console.WriteLine("Fazendo um teste");
         }
     }
-
-    class Score3 //class is on the heap
-    {
-        public string _name;
-        public int _points;
-        public int _level;
-
-        public Score3(string name, int points, int level) //constructores ensure that a variavel ensure that it begins in a good stats. Assigning initial values to each field is common.
-        {
-            _name = name;
-            _points = points;
-            _level = level; //o underscore é mais usado, mas faz o mesmo papel do this
-        }
-    }
-
-    class Score4
-    {
-        public string _name;
-        public int _points;
-        public float _level;
-
-        public Score4() : this("Unknown", 10, 43.5f) //basicamente reusa o construtor com outros parametros sem construir do zero
-        {
-            Console.WriteLine($"Será que esse é o novo construtor: {_name}");
-            Console.WriteLine($"Será que esse é o novo construtor: {_points}");
-            Console.WriteLine($"Será que esse é o novo construtor: {_level}");
-        } //isso é basicamente chamando um método mas estamos chamando um construtor
-
-        public Score4(string name, int points, float level) //resusa esse construtor
-        {
-            _name = name;
-            _points = points;
-            _level = level;
-        }
-    }
-
-    //Usar uma classe sem construtor explícito é útil quando você não se importa com valores iniciais ou quando os valores podem ser configurados diretamente depois que o objeto for criado.
 }
