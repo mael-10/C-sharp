@@ -6,10 +6,11 @@
         static void Main(string[] args)
         {
             Arrow teste = new Arrow(ArrowHead.Wood, Fletching.Plastic, 64);
-            float finalcost = teste.GetCost();
+            Arrow teste2 = new Arrow(ArrowHead.Obsidian, Fletching.TurkeyFeathers, 100);
 
-            Console.WriteLine($"Final cost thats it {finalcost}");
 
+            Console.WriteLine($"Final cost thats it {teste.GetCost()}");
+            Console.WriteLine($"Final cost thats it {teste2.GetCost()}");
         }
     }
 
