@@ -43,6 +43,8 @@ namespace Pivate_Set
              * 2- Soma o valor Saldo + valor e anexa no Saldo (aqui que pega o get)
              * 3- Chama o Saldo (com o valor já somado)
              * 4- Depois valida
+             * set garante que _saldo não vai receber o valor errado
+             * metodo trata a regra de negócio
              */
         }
     }
