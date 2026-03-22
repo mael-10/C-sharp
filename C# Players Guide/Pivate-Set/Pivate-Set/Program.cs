@@ -29,15 +29,21 @@ namespace Pivate_Set
             get => _saldo;
             private set //validar no set é melhor pois é obrigado a respeita o information hiding (valida os  valores e depis atribui)
             {
-                decimal newValue = _saldo + value; //=+ atribui += acumula
-                _saldo = newValue <= 0 ? 0 : newValue; //da um valor de retorno (atribui o novo valor)
+                _saldo = value <= 0 ? 0 : value; //da um valor de retorno (atribui o novo valor)
             }
-               
+
         }
 
-        public void Deposit(decimal valor = 0m) //Como ele é private set, o valor
+        public void Deposit(decimal valor) //Como ele é private set, o valor
         {
             Saldo += valor;
+
+            /*
+             * 1- Chama o get (que é o valor atual
+             * 2- Soma o valor Saldo + valor e anexa no Saldo
+             * 3- Chama o Saldo (con o valor já somado)
+             * 4- Depois valida
+             */
         }
     }
 }
