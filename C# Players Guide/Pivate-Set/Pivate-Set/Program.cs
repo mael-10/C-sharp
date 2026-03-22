@@ -40,8 +40,8 @@ namespace Pivate_Set
 
             /*
              * 1- Chama o get (que é o valor atual
-             * 2- Soma o valor Saldo + valor e anexa no Saldo
-             * 3- Chama o Saldo (con o valor já somado)
+             * 2- Soma o valor Saldo + valor e anexa no Saldo (aqui que pega o get)
+             * 3- Chama o Saldo (com o valor já somado)
              * 4- Depois valida
              */
         }
