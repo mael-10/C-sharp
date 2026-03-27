@@ -59,7 +59,7 @@
 
     public class Arrow
     {
-        public Arrowhead Arrowhead { get; init; }
+        public Arrowhead Arrowhead { get; init; } //c# permite ter enums com o mesmo nome do tipo e identificador
         public Fletching Fletching { get; init; }
         public float Length { get; init; }
 
