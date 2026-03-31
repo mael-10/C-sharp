@@ -54,8 +54,6 @@
              *  Quando vc faz Global id = new Global(); ele tá chamando a instancia e não o static
              */
         }
-
-
     }
 
     /* O global state pode ser perigoso 
