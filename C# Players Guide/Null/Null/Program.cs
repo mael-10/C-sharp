@@ -7,9 +7,13 @@
             ScoreManager _score = new ScoreManager();
 
             _score.AddToList(null, 10);
-            _score.AddToList(null, 20);
+            _score.AddToList("Nome", 20);
 
-            var oi = _score?.ListaInterna?[0]?.Nome ?? "Nada encontrado";
+            var oi = _score?.ListaInterna?[0]?.Nome ?? "Nada encontrado"; //útil para validação de banco de dados
+            var oi2 = _score?.ListaInterna?[1]?.Nome ?? "Nada encontrado";
+
+            Console.WriteLine(oi);
+            Console.WriteLine(oi2);
 
             /*
              * _score?: "O gerente existe?"
@@ -21,6 +25,8 @@
                 ?.Nome: "O objeto que está no índice 0 tem um nome ou o nome é nulo?"
 
                 ?? "Nada encontrado": "Se qualquer uma das perguntas acima deu 'Não/Null', use esse texto aqui. (Null Coalescing)
+
+               Ele sempre valida a esquerda para sempre proteger o acesso a direita, então 'nome 'não tem ? pq não tem nada mais para acessar
              *
              * Você pode usar o 
              */
@@ -48,5 +54,7 @@
         {
             ListaInterna.Add(new ScoreVar { Nome = name, Point = point });
         }
+
+        
     }
 }
