@@ -4,8 +4,6 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-
             Color test = Color.SetColor(0, 0, 0);
             var ColorAndNumber = Color.TheColor(test);
             Console.WriteLine(test.B);
@@ -16,6 +14,7 @@
 
     public class Color()
     {
+        
         private int _r, _g, _b;
 
         public int R
@@ -66,15 +65,5 @@
     public static class Validate
     {
         public static int Entry(int value) => Math.Clamp(value, 0, 255);
-        
     }
 }
-
-//Positional Pattern (switch)
-//propety pattern (swiych)
-//Pattern Matching
-//Target-Typed New
-//Relational & Logical Patterns
-//Responsabilidade única
-//Null-conditional Access
-//Null-conditional Assignment
