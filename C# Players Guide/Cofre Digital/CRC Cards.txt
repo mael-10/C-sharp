@@ -1,0 +1,51 @@
+
+Exercíco 1 ---------------------
+
+CRC Cards --- Cofre Digital
+
+1 -> Usuários, Moedas, Cofre, Portão do Cofre --> Enum
+
+2 -> Colocar moedas no cofre, Abrir ou Trancar --> 
+
+3- 
+
+Cofre (Classe de Entidade) ------------------------------------- 
+
+Responsablidade ------------------------------------------------ Colaborador
+
+- Guardar o Nome do Dono do Cofre ------------------------------ Colaborador de Contrato (Usuário) //Colaborador de contrato é permitido
+- Guardar o Saldo
+- Guardar o Estado (Aberto ou Fechado) -------------------------- Colaborador de Contrato (GetWay)
+- Guardar a Senha do Cofre
+- Somar Saldo
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+Usuário (Classe de Entidade) -----------------------------------
+
+Responsablidade ------------------------------------------------- Colaborador
+
+- Guardar Id, Nome, CPF
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+Moedas (Classe de Lógica) ---------------------------------------
+
+Responsabilidade ------------------------------------------------ Colaborador
+
+- Calcular saldo válido
+
+- Guardar saldo  ------------------------------------------- Cofre (Classe de Entidade) - Colaborador de Contrato
+----------------------------------------------------------------------------------
+----------------------------
+
+GetWay (Classe de DTO) --> Enum --------------------------------------
+
+Moedas (Classe de Lógica) --------------------------------------------------
+
+Responsabilidade ------------------------------------------------ Colaborador
+
+- Armazenar Estados dos Portões 
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
